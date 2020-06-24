@@ -1,0 +1,10 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#570066",
+    "navigationBarTitleText": "松松文库"
+  },
+  "sitemapLocation": "sitemap.json"
+}
