@@ -1,11 +1,22 @@
 <view class='loading-container' wx:if='{{isDownloading}}'>
   <text>下载中，请稍后</text>
-  <progress percent="{{percentNum}}" stroke-width="6" activeColor="#663366" backgroundColor="#ffffff" show-info active active-mode="forwards"></progress>
+  <progress 
+    percent="{{percentNum}}" stroke-width="6" activeColor="#663366" 
+    backgroundColor="#ffffff" show-info active active-mode="forwards">
+    </progress>
 </view>
 
-<view class='book-container' wx:else>
-  <view class='box' wx:for='{{bookList}}' wx:key='id' data-file='{{item.fileUrl}}' data-id='{{item.id}}' bindtap='readBook'>
-    <image src='{{item.poster}}'></image>
-    <text>{{item.title}}</text>
+<view wx:else>
+  <view class='book-container'>
+    <view class='box' wx:for='{{bookList}}' wx:key='id' data-file='{{item.fileUrl}}' data-id='{{item.id}}' bindtap='readBook'>
+      <image src='{{item.poster}}'></image>
+      <text>{{item.title}}</text>
+    </view>
   </view>
+
+  <button class='weatherBtn' bindtap="navWeather">
+    <image class='btnImg' src='../../images/weather.png'></image>
+    <view>天气状况</view>
+  </button>
 </view>
+
