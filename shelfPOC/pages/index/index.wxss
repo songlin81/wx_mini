@@ -27,8 +27,8 @@ progress{
 }
 
 image {
-  width: 200rpx;
-  height: 300rpx;
+  width: 70%;
+  height: 70%;
 }
 
 text {

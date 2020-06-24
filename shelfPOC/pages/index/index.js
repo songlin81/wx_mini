@@ -7,7 +7,7 @@ Page({
         'content-type': 'application/json'
       },
       success: function (res) {
-        console.log(res.data.bookList)
+        //console.log(res.data.bookList)
         that.setData({
             isDownloading: false,
             percentNum: 0,
