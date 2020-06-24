@@ -6,7 +6,7 @@ Page({
       hum:0, pres:0, vis:0,
       wind_dir:0, wind_spd:0, wind_sc:0
     },
-    versionNo:''
+    versionNo:'v0.1'
   },
   
   onLoad: function(params) {
