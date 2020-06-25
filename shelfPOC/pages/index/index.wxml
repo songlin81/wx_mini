@@ -14,7 +14,7 @@
     </view>
   </view>
 
-  <button class='weatherBtn' bindtap="navWeather">
+  <button class='weatherBtn' hover-class="btn-hover" bindtap="navWeather">
     <image class='btnImg' src='../../images/weather_icon/103.png'></image>
     <view>天气状况</view>
   </button>

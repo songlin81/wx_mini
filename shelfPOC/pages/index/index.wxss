@@ -48,3 +48,6 @@ image {
   width: 80rpx;
   height: 80rpx;
 }
+.btn-hover{
+  box-shadow:4px 4px 8px rgb(214, 164, 226) inset; 
+}
