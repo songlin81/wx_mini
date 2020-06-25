@@ -6,3 +6,9 @@
   </block>
 </swiper>
 
+<view id='news-list'>
+  <view class='list-item' wx:for="{{newsList}}" wx:for-item="news" wx:key="{{news.id}}">
+    <image src='{{news.poster}}'></image>
+    <text bindtap='goToDetail' data-id='{{news.id}}'>◇{{news.title}}——{{news.add_date}}</text>
+  </view>
+</view>
