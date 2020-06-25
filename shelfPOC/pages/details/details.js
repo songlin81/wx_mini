@@ -32,7 +32,7 @@ Page({
     }
   },
 
-  addFavorites: function(options) {
+  addFavorites: function() {
     let item = this.data.product; 
     wx.setStorageSync(item.goodsId, item); 
     this.setData({

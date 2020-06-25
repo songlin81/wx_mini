@@ -26,5 +26,9 @@ Page({
     wx.navigateTo({
       url: "/pages/details/details?prodid="+e.currentTarget.dataset.prodid
     });
-  }
+  },
+
+  onReachBottom: function () {
+    console.log('加载更多')
+  },
 })
