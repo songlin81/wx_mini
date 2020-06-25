@@ -1,6 +1,6 @@
 <swiper indicator-dots="true" autoplay="true" interval="5000" duration="500">
-  <block wx:for="{{swiperList}}" wx:key='swiper{{index}}'>
-    <swiper-item>
+  <block wx:for="{{swiperList}}" wx:key='index'>
+    <swiper-item bindtap='navDetail' data-prodid='{{item.goodsId}}'>
       <image src="{{item.image}}"></image>
     </swiper-item>
   </block>

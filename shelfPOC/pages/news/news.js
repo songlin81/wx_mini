@@ -10,19 +10,16 @@ Page({
       data: {
       },
       success: function(res){
-        //console.log(res.data);
+        console.log(res.data.data.slides);
         that.setData({
           swiperList: res.data.data.slides
         })
       }
     })
-
-    // let list = common.getSwiperList()
-    // console.log(list)
-    // this.setData({
-    //   swiperList: list
-    // })
   },
-
-  
+  navDetail: function(e){
+    wx.navigateTo({
+      url: "/pages/details/details?prodid="+e.currentTarget.dataset.prodid
+    });
+  }
 })
