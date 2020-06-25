@@ -16,6 +16,6 @@
     </view>
   </view>
 </view>
-<view class="weui-loadmore weui-loadmore_line" hidden='{{hasmoreData}}'>
-  <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无更多数据</view>
+<view class="loadmore_line" hidden='{{hasmoreData}}'>
+  <view class="loadmore_tips">暂无更多数据</view>
 </view>

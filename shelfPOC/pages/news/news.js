@@ -4,8 +4,7 @@ Page({
     hiddenloading: true,
     inventoryList: [],
     page: 1,
-    hasmoreData: true,
-    hiddenloading: true
+    hasmoreData: true
   },
   onLoad: function(options) {
     var that = this;
@@ -41,17 +40,20 @@ Page({
       method: 'GET',
       data: {"page": that.data.page},
       success: function(res){
-        console.log(res.data.data.news.length)
         if(res.data.data.news.length>0){
           console.log('???')
           for(var i=0;i<res.data.data.news.length;i++){
             that.data.inventoryList.push(res.data.data.news[i])
           }
           that.setData({
-            inventoryList: that.data.inventoryList
+            inventoryList: that.data.inventoryList,
+            hasmoreData: true
           })
         }else{
           console.log('YYYY')
+          that.setData({
+            hasmoreData: false
+          })
         }
       },
       fail: function(res){
