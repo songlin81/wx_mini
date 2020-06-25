@@ -25,6 +25,8 @@
 .list-item{
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   border-bottom: 1rpx solid gray;
   height: 200rpx;
 }
