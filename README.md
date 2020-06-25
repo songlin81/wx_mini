@@ -1,4 +1,4 @@
-# wx_mini
+# WeChat Mini Program
  Repository for WX mini program POCs
 
 ## Preview
