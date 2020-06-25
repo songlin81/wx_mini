@@ -2,18 +2,22 @@ var common = require('../../utils/common.js')
 Page({
   data: {
   },
-
   onLoad: function(options) {
     var that = this;
     common.getSwiperList({
       method: 'GET',
-      data: {
-      },
+      data: {},
       success: function(res){
-        console.log(res.data.data.slides);
+        console.log(res);
         that.setData({
           swiperList: res.data.data.slides
         })
+      },
+      fail: function(res){
+        console.log('fail: '+res.errMsg.toString())
+      },
+      complete: function(res){
+        console.log('complete: '+res.statusCode.toString())
       }
     })
   },

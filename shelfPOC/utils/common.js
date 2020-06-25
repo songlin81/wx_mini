@@ -11,7 +11,6 @@ const wxRequest = function(params, url) {
     data: params.data || {},
     header: {'content-type': 'application/json'},
     success: function (res) {
-      //console.log(res.data.data.slides)
       params.success && params.success(res)
       wx.hideToast()
     },
@@ -25,7 +24,9 @@ const wxRequest = function(params, url) {
 }
 
 const innerGetSwiperList = function (params) { wxRequest(params, host + '/getList') }
+const getDetailsBasedOnId = function (params) { wxRequest(params, host + '/getDetail') }
 
 module.exports = {
   getSwiperList: innerGetSwiperList,
+  getProductDetails: getDetailsBasedOnId
 }

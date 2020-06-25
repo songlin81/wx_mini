@@ -1,1 +1,14 @@
-<text>{{prodId}}</text>
+<!-- <text>{{product.goodsId}}</text> -->
+<view class='container'>
+  <view class='title'>{{product.title}}</view>
+  <view class='productImage'>
+    <image src='{{product.image}}' mode='widthFix'></image>
+  </view>
+  <view class='content'>{{product.contents}}</view>
+  <view class='add_date'>时间：{{product.add_date}}</view>
+
+  <button wx:if='{{isAdd}}' plain bindtap='cancelFavorites'>
+    <text class='highlightContent'>♥</text>已收藏
+  </button>
+  <button wx:else plain bindtap='addFavorites'>♥点击收藏</button>
+</view>

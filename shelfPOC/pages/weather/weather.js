@@ -10,6 +10,7 @@ Page({
   },
   
   onLoad: function(params) {
+    wx.setNavigationBarTitle({ title: "天气详情" });
     this.getWeather();
     this.setData({
       versionNo: params.version

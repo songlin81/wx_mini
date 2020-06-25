@@ -1,1 +1,32 @@
-/* pages/details/details.wxss */
+.container{
+  padding: 15rpx;
+  text-align: center;
+}
+.title{
+  font-size: 14pt;
+  line-height: 80rpx;
+}
+.productImage image{
+  width: 100%;
+}
+.content{
+  text-align: left;
+  font-size: 12pt;
+  line-height: 60rpx;
+}
+.add_date{
+  font-size: 12pt;
+  text-align: right;
+  line-height: 30rpx;
+  margin-right: 25rpx;
+  margin-top: 20rpx;
+  margin-bottom: 60rpx;
+}
+button{
+  width: 300rpx;
+  height: 100rpx;
+  margin: 20rpx auto;
+}
+.highlightContent{
+  color: red
+}
