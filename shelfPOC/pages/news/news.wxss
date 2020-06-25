@@ -15,10 +15,10 @@ swiper image {
   display: flex;
   flex-direction: row;
   border-bottom: 1rpx solid gray;
+  height: 200rpx;
 }
 .list-item image{
-  width:230rpx;
-  height: 150rpx;
+  width:180rpx;
   margin: 10rpx;
 }
 .list-item text{

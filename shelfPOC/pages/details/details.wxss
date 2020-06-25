@@ -7,7 +7,7 @@
   line-height: 80rpx;
 }
 .productImage image{
-  width: 100%;
+  width: 75%;
 }
 .content{
   text-align: left;

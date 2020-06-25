@@ -10,7 +10,8 @@ Page({
       success: function(res){
         console.log(res);
         that.setData({
-          swiperList: res.data.data.slides
+          swiperList: res.data.data.slides,
+          inventoryList: res.data.data.news
         })
       },
       fail: function(res){
