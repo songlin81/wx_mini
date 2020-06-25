@@ -8,7 +8,7 @@ Page({
         that.setData({
             isDownloading: false,
             percentNum: 0,
-            bookList: res.data.bookList
+            bookList: res.data.data.bookList
         })
       }
     })
