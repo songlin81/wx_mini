@@ -9,8 +9,10 @@
 <view id='news-list'>
   <view class='list-item' wx:for="{{inventoryList}}" wx:for-item="product" wx:key="index">
     <image src='{{product.image}}' mode='widthFix' bindtap='navDetail' data-prodid='{{product.goodsId}}'></image>
-    <text bindtap='navDetail' data-prodid='{{product.goodsId}}'>
-      ◇ {{product.title}} ({{product.add_date}})
-    </text>
+    <view class='central'>
+      <text bindtap='navDetail' data-prodid='{{product.goodsId}}'>
+        ◇ {{product.title}} ({{product.add_date}})
+      </text>
+    </view>
   </view>
 </view>
