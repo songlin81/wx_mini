@@ -1,5 +1,5 @@
 # wx_mini
- repository to WX mini program POCs
+ Repository for WX mini program POCs
 
 ## Preview
 
