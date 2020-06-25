@@ -17,5 +17,5 @@
   </view>
 </view>
 <view class="loadmore_line" hidden='{{hasmoreData}}'>
-  <view class="loadmore_tips">暂无更多数据</view>
+  暂无更多数据
 </view>
