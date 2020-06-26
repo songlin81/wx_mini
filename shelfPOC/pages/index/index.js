@@ -14,33 +14,6 @@ Page({
     })
   },
 
-  renderAnimation: function(){
-    var circleCount = 0;
-    // 心跳的外框动画
-    this.animationMiddleHeaderItem = wx.createAnimation({
-      duration: 1000, // 以毫秒为单位
-      timingFunction: 'linear',
-      delay: 100,
-      transformOrigin: '50% 50%',
-      success: function (res) {
-      }
-    });
-    setInterval(function () {
-      if (circleCount % 2 == 0) {
-        this.animationMiddleHeaderItem.scale(1.15).step();
-      } else {
-        this.animationMiddleHeaderItem.scale(1.0).step();
-      }
-      this.setData({
-        animationMiddleHeaderItem: this.animationMiddleHeaderItem.export()
-      });
-      circleCount++;
-      if (circleCount == 1000) {
-        circleCount = 0;
-      }
-    }.bind(this), 1000);
-  },
-
   onReady: function () {
     var circleCount = 0;
     this.animationMiddleHeaderItem = wx.createAnimation({
