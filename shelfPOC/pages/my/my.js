@@ -40,6 +40,7 @@ Page({
 
   getMyInfo: function (e) {
     let info = e.detail.userInfo;
+    console.log(info)
     this.setData({
       isLogin: true,
       src: info.avatarUrl,
@@ -47,6 +48,30 @@ Page({
     })
     this.getMyFavorites();
   },
+
+  getOpenid: function() {  
+    let that = this;
+    wx.login({   
+      success: function(res) {
+      wx.request({     
+        url: 'https://30paotui.com/user/wechat',     
+        data: {     
+          appid: '你的小程序appid',      
+          secret: '你的小程序secret',      
+          code: res.code
+       },     
+       success: function(response) {      
+         var openid = response.data.openid;      
+         console.log('请求获取openid:' + openid);
+          wx.setStorageSync('openid', openid);
+          that.setData({       
+            openid: "获取到的openid：" + openid
+          })
+       }
+      })
+     }
+    })
+   },
 
   goToDetail: function (e) {
     let id = e.currentTarget.dataset.prodid;

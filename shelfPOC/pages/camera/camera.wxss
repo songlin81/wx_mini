@@ -1,1 +1,74 @@
-/* pages/camera/camera.wxss */
+.outerLayer{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  font-size: 30rpx; 
+}
+.textHeader{
+  border-bottom: 1rpx solid gray;
+  margin-bottom: 10rpx;
+}
+.conts{
+  width: 750rpx;
+  height: auto;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx; 
+}
+.areas{
+  height:300rpx;
+  text-indent: 28rpx;
+  border: 1rpx solid gainsboro;
+  padding-top: 40rpx;
+  width: 708rpx;
+}
+.currentWordNumber{
+  color: gray;
+  position: absolute;
+  right: 50rpx;
+  top: -6rpx;
+}
+.hint{
+   position: absolute;
+   top: 250rpx;
+   left: 400rpx;
+   color: #570066;
+   text-align: right;
+}
+.suggest_img{
+  margin-bottom: 30rpx;
+}
+.img_box{
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+.have_img{
+  margin-bottom: 30rpx;
+}
+.pickedImg, .sug_picture{
+  width:100rpx;
+  height:100rpx;
+}
+.deleteBtn{
+    width:30rpx;
+    height:30rpx;
+    border-radius:50%;
+    position:relative;
+    top:-90rpx;
+    right:20rpx;
+    z-index:800;
+}
+.requestBtn{
+  position: fixed;
+  bottom: 10rpx;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: #570066;
+  color: white;
+  border-radius: 50rpx;
+}
+.btn-hover{
+  box-shadow:4px 4px 8px rgb(214, 164, 226) inset; 
+}

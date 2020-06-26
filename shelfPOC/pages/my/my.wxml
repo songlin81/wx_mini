@@ -9,7 +9,7 @@
 </view>
 
 <view id='photelist' bindtap='takePhote'>
-  产品定制
+  意见反馈
 </view>
 
 <view id='myFavorites'>
