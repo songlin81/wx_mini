@@ -3,6 +3,50 @@ Page({
     num: 0
   },
 
+  globalData:{
+    appid:'wx3844be5fa785d5b3', 
+    secret:'7bd68d4156e5f06e9e56e19c55df4043', 
+  },
+  onLoad: function () {
+    var that = this
+    var user=wx.getStorageSync('user') || {};  
+    var userInfo=wx.getStorageSync('userInfo') || {}; 
+    if((!user.openid || (user.expires_in || Date.now()) < (Date.now() + 600))&&(!userInfo.nickName)){ 
+       wx.login({  
+       success: function(res){ 
+           if(res.code) {
+               wx.getUserInfo({
+                   success: function (res) {
+                       var objz={};
+                       objz.avatarUrl=res.userInfo.avatarUrl;
+                       objz.nickName=res.userInfo.nickName;
+                       console.log(objz);
+                       wx.setStorageSync('userInfo', objz);
+                   }
+               });
+               var d=that.globalData;
+               var l='https://api.weixin.qq.com/sns/jscode2session?appid='+d.appid+'&secret='+d.secret+'&js_code='+res.code+'&grant_type=authorization_code';  
+               wx.request({  
+                   url: l,  
+                   data: {},  
+                   method: 'GET',
+                   header: {},
+                   success: function(res){ 
+                       var obj={};
+                       obj.openid=res.data.openid;  
+                       obj.expires_in=Date.now()+res.data.expires_in;  
+                       console.log(obj);
+                       wx.setStorageSync('user', obj);
+                   }  
+               });
+           }else {
+               console.log('获取用户登录态失败！' + res.errMsg)
+           }          
+       }  
+     }); 
+   } 
+  },
+
   onShow: function () {
     if(this.data.isLogin){
       this.getMyFavorites()
@@ -20,7 +64,7 @@ Page({
 
   getMyFavorites: function () {
     let info = wx.getStorageInfoSync();
-    console.log(info)
+    //console.log(info)
     let keys = info.keys;
     let num = keys.length;
     let myList = [];
@@ -39,42 +83,18 @@ Page({
   },
 
   getMyInfo: function (e) {
-    let info = e.detail.userInfo;
+    let info = e.detail.userInfo
     console.log(info)
     this.setData({
       isLogin: true,
       src: info.avatarUrl,
       nickName: info.nickName
     })
-    this.getMyFavorites();
+    this.getMyFavorites()
   },
 
-  getOpenid: function() {  
-    let that = this;
-    wx.login({   
-      success: function(res) {
-      wx.request({     
-        url: 'https://30paotui.com/user/wechat',     
-        data: {     
-          appid: '你的小程序appid',      
-          secret: '你的小程序secret',      
-          code: res.code
-       },     
-       success: function(response) {      
-         var openid = response.data.openid;      
-         console.log('请求获取openid:' + openid);
-          wx.setStorageSync('openid', openid);
-          that.setData({       
-            openid: "获取到的openid：" + openid
-          })
-       }
-      })
-     }
-    })
-   },
-
   goToDetail: function (e) {
-    let id = e.currentTarget.dataset.prodid;
+    let id = e.currentTarget.dataset.prodid
     wx.navigateTo({
       url: "/pages/details/details?prodid="+e.currentTarget.dataset.prodid
     })
