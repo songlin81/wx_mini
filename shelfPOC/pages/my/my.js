@@ -53,5 +53,11 @@ Page({
     wx.navigateTo({
       url: "/pages/details/details?prodid="+e.currentTarget.dataset.prodid
     })
-  }
+  },
+
+  takePhote: function(){
+    wx.navigateTo({
+      url: "/pages/camera/camera"
+    });
+  },
 })

@@ -8,8 +8,8 @@
   </button>
 </view>
 
-<view id='pricelist'>
-  价目表
+<view id='photelist' bindtap='takePhote'>
+  产品定制
 </view>
 
 <view id='myFavorites'>
