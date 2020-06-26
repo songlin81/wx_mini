@@ -22,9 +22,9 @@ Page({
       })
     } else if (len >= this.data.min){
        this.setData({
-        texts: " ",
-        textss: " ",
-        num: '',
+        texts: "",
+        textss: "",
+        num: "",
         isDisabled: false
       })
     }
@@ -38,9 +38,9 @@ Page({
     wx.chooseImage({
       success: function(res) { 
         var src = res.tempFilePaths;
-        var aa=that.data.add_img.concat(src)
+        var allPaths=that.data.add_img.concat(src)
         that.setData({
-          add_img:aa
+          add_img: allPaths
         })
       },
     })
@@ -57,7 +57,6 @@ Page({
           that.setData({
             add_img:that.data.add_img
           })
-          console.log(that.data.add_img)
         } else if (res.cancel) {
           console.log('用户点击取消')
         }
@@ -82,7 +81,8 @@ Page({
       add_img:[],
       currentWordNumber:0,
       isDisabled: true,
-      focus: true
+      focus: true,
+      texts: "至少15个字",
     })
   }
 })

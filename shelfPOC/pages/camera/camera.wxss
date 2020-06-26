@@ -18,7 +18,9 @@
   text-indent: 28rpx;
   border: 1rpx solid gainsboro;
   padding-top: 40rpx;
-  width: 708rpx;
+  padding-right: 25rpx;
+  width: 680rpx;
+  word-break: break-all;
 }
 .currentWordNumber{
   color: gray;

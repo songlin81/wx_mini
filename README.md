@@ -9,6 +9,9 @@
 	<img src="https://github.com/songlin81/wx_mini/blob/master/screen/3.jpg" alt="Img 3" width="400"/>
 	<img src="https://github.com/songlin81/wx_mini/blob/master/screen/4.jpg" alt="Img 4" width="400"/>
 	<img src="https://github.com/songlin81/wx_mini/blob/master/screen/5.jpg" alt="Img 5" width="400"/>
+	<img src="https://github.com/songlin81/wx_mini/blob/master/screen/6.jpg" alt="Img 6" width="400"/>
+	<img src="https://github.com/songlin81/wx_mini/blob/master/screen/7.jpg" alt="Img 7" width="400"/>
+	<img src="https://github.com/songlin81/wx_mini/blob/master/screen/8.jpg" alt="Img 8" width="400"/>
 </p>
 
 <p float="left";>
